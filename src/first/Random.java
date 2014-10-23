@@ -5,13 +5,17 @@ package first;
  */
 public class Random {
 
-    public static int generate(int min,int max)
-    {
-        return min + (int)(Math.random() * ((max - min) + 1));
+    public static int genRnd(int min, int max) {
+
+        int rnum;
+        rnum = min + (int) (Math.random() * ((max - min) + 1));
+        return rnum;
     }
 
-    public static void main(String[] args)
-    {
-        System.out.println(Random.generate(0,10));
+    public static void main(String[] args) {
+
+
+        System.out.println(Random.genRnd(0, 10));
+
     }
 }

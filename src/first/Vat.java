@@ -9,7 +9,7 @@ public class Vat {
         System.out.println(incVat(21));
     }
 
-    public static double incVat(double price){
+    public static double incVat(double price) {
         price = price + price / 100 * 21;
         return price;
     }
