@@ -1,4 +1,3 @@
-import java.util.Random;
 package first;
 
 /**
@@ -6,28 +5,13 @@ package first;
  */
 public class Random {
 
-    public static int generate(int min,int max) {
-
-        return
-
+    public static int generate(int min,int max)
+    {
+        return min + (int)(Math.random() * ((max - min) + 1));
     }
 
-    public static void main(String[] args) {
-
-        System.out.println(generate(0,10));
-
-    }
-
-    public static void main(String[] args){
-
-        Random aRandom = new Random();
-
-        System.out.println(aRandom.nextInt());
-
-        //print a random number between 1 and 10
-        System.out.println(aRandom.nextInt(10) + 1);
-
-        System.out.println(aRandom.nextDouble());
-        System.out.println(aRandom.nextBoolean());
+    public static void main(String[] args)
+    {
+        System.out.println(Random.generate(0,10));
     }
 }
