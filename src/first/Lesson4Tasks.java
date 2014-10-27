@@ -24,6 +24,8 @@ public class Lesson4Tasks {
         System.out.println("Highest number using 'For': " + maxFor());
         System.out.println("Highest number using 'Foreach': " + maxForEach());
         System.out.println();
+
+        System.out.println(getFromArr(12));
     }
 
     public static int genRnd(int min, int max) {
@@ -74,5 +76,26 @@ public class Lesson4Tasks {
             }
         }
         return highest;
+    }
+
+    public static int getFromArr(int value) {
+        int[] arr = new int[]{23, 54, 84, 12, 4, 1};
+        int index;
+        int count = 0;
+        for (index = 0; index < arr.length ; index++) {
+            if (arr[index] != value) {
+                count++;
+                if (count >= arr.length) {
+                    index = -1;
+                    System.out.print("No such value! Index ");
+                    break;
+                }
+            }
+            else if (arr[index] == value) {
+                System.out.print("Value index ");
+                break;
+            }
+        }
+        return index;
     }
 }
