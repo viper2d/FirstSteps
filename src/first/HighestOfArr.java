@@ -7,20 +7,33 @@ public class HighestOfArr {
 
     public static void main(String[] args) {
 
-        System.out.println("Highest number: " + maxFor());
+        System.out.println("Highest number using 'For': " + maxFor());
+        System.out.println("Highest number using 'Foreach': " + maxForEach());
     }
 
     public static int maxFor() {
 
-        int[] arr = new int[] {2, 4, 6, 8, 10};
-        int max = arr[0];
+        int[] arr = new int[] {4, 6, 12, 8, 10};
+        int highest = arr[0];
 
-        for (int ind = 0; ind < arr.length; ind++) {
-            if (arr[ind] > max) {
-                max = arr[ind];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > highest) {
+                highest = arr[i];
             }
         }
-        return max;
+        return highest;
+    }
+
+    public static int maxForEach() {
+        int[] arr = new int[] {4, 6, 12, 8, 10};
+        int highest = arr[0];
+
+        for (int i : arr) {
+            if (i > highest) {
+                highest = i;
+            }
+        }
+        return highest;
     }
 
 }
